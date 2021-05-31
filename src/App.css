@@ -1,38 +1,60 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('./star.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, p, a {
+  color: aqua;
+  text-decoration: none;
+  margin-top: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.planets {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.planet {
+  display: inline-block;
+  columns: 5;
 }
-
-@keyframes App-logo-spin {
+.planets_heading {
+  width: 100%;
+  color: #c6e2ff;
+    animation: neon .08s ease-in-out infinite alternate;
+}
+@keyframes neon {
   from {
-    transform: rotate(0deg);
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px rgba(30,132,242,0.92),
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px rgba(30,132,242,0.92);
   }
   to {
-    transform: rotate(360deg);
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.98),
+    0 0 30px rgba(202,228,225,0.42),
+    0 0 12px rgba(30,132,242,0.58),
+    0 0 22px rgba(30,132,242,0.84),
+    0 0 38px rgba(30,132,242,0.88),
+    0 0 60px rgba(30,132,242,1);
   }
+}
+.planet_link {
+  color: aqua;
+  text-decoration: none;
+}
+.stats {
+  text-align: right;
+  text-decoration: underline;
+  margin-right: 10px;
 }
